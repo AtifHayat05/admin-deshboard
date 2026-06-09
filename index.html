@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>Dashboard</h2>
+
+        <ul>
+          <li>📊 Overview</li>
+          <li>📈 Analytics</li>
+          <li>👥 Users</li>
+          <li>⚙ Settings</li>
+        </ul>
+
+        <button id="themeBtn">Toggle Theme</button>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <header>
+          <h1>Admin Dashboard</h1>
+
+          <input type="text" id="search" placeholder="Search activity..." />
+        </header>
+
+        <!-- Cards -->
+        <section class="cards">
+          <div class="card">
+            <h3>Total Users</h3>
+            <p>1,245</p>
+          </div>
+
+          <div class="card">
+            <h3>Revenue</h3>
+            <p>$18,420</p>
+          </div>
+
+          <div class="card">
+            <h3>Orders</h3>
+            <p>392</p>
+          </div>
+        </section>
+
+        <!-- Activity Table -->
+        <section class="table-section">
+          <h2>Recent Activity</h2>
+
+          <table>
+            <tr>
+              <th>User</th>
+              <th>Action</th>
+            </tr>
+
+            <tr>
+              <td>Ali</td>
+              <td>Created Order</td>
+            </tr>
+
+            <tr>
+              <td>Sarah</td>
+              <td>Updated Profile</td>
+            </tr>
+
+            <tr>
+              <td>John</td>
+              <td>Made Payment</td>
+            </tr>
+
+            <tr>
+              <td>Emma</td>
+              <td>Deleted Product</td>
+            </tr>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
