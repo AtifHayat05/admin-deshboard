@@ -13,19 +13,19 @@
         <h2>Dashboard</h2>
 
         <ul>
-          <li>📊 Overview</li>
-          <li>📈 Analytics</li>
-          <li>👥 Users</li>
-          <li>⚙ Settings</li>
+          <li class="menu-item active" data-title="Overview">📊 Overview</li>
+          <li class="menu-item" data-title="Analytics">📈 Analytics</li>
+          <li class="menu-item" data-title="Users">👥 Users</li>
+          <li class="menu-item" data-title="Settings">⚙ Settings</li>
         </ul>
 
-        <button id="themeBtn">Toggle Theme</button>
+        <button id="themeBtn">🌙 Toggle Theme</button>
       </aside>
 
       <!-- Main Content -->
       <main class="content">
         <header>
-          <h1>Admin Dashboard</h1>
+          <h1 id="pageTitle">Overview</h1>
 
           <input type="text" id="search" placeholder="Search activity..." />
         </header>
@@ -34,49 +34,53 @@
         <section class="cards">
           <div class="card">
             <h3>Total Users</h3>
-            <p>1,245</p>
+            <p class="counter" data-target="1245">0</p>
           </div>
 
           <div class="card">
             <h3>Revenue</h3>
-            <p>$18,420</p>
+            <p class="counter" data-target="18420">0</p>
           </div>
 
           <div class="card">
             <h3>Orders</h3>
-            <p>392</p>
+            <p class="counter" data-target="392">0</p>
           </div>
         </section>
 
-        <!-- Activity Table -->
+        <!-- Table -->
         <section class="table-section">
           <h2>Recent Activity</h2>
 
           <table>
-            <tr>
-              <th>User</th>
-              <th>Action</th>
-            </tr>
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Action</th>
+              </tr>
+            </thead>
 
-            <tr>
-              <td>Ali</td>
-              <td>Created Order</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>Ali</td>
+                <td>Created Order</td>
+              </tr>
 
-            <tr>
-              <td>Sarah</td>
-              <td>Updated Profile</td>
-            </tr>
+              <tr>
+                <td>Sarah</td>
+                <td>Updated Profile</td>
+              </tr>
 
-            <tr>
-              <td>John</td>
-              <td>Made Payment</td>
-            </tr>
+              <tr>
+                <td>John</td>
+                <td>Made Payment</td>
+              </tr>
 
-            <tr>
-              <td>Emma</td>
-              <td>Deleted Product</td>
-            </tr>
+              <tr>
+                <td>Emma</td>
+                <td>Deleted Product</td>
+              </tr>
+            </tbody>
           </table>
         </section>
       </main>
