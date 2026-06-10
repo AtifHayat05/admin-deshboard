@@ -57,19 +57,26 @@ counters.forEach((counter) => {
   const updateCounter = () => {
     const target = +counter.dataset.target;
 
-    const current = +counter.innerText.replace(/,/g, "");
+    const current = +counter.innerText.replace(/[^0-9]/g, "");
 
     const increment = Math.ceil(target / 100);
 
     if (current < target) {
-      counter.innerText = Math.min(
-        current + increment,
-        target,
-      ).toLocaleString();
+      const value = Math.min(current + increment, target);
+
+      if (counter.dataset.type === "currency") {
+        counter.innerText = "$" + value.toLocaleString();
+      } else {
+        counter.innerText = value.toLocaleString();
+      }
 
       setTimeout(updateCounter, 20);
     } else {
-      counter.innerText = target.toLocaleString();
+      if (counter.dataset.type === "currency") {
+        counter.innerText = "$" + target.toLocaleString();
+      } else {
+        counter.innerText = target.toLocaleString();
+      }
     }
   };
 
